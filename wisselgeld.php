@@ -17,20 +17,5 @@ else{
     echo $rest . " x " . $value . " Cent" ."\n";
 }
 }
-public function rounding($number){
-    $last_one = intval(substr($number,-1,1));
-    $last_two = intval(substr($number,-2,1));
-    if($last_one > 5){
-        $last_one = 0;
-        $last_two = $last_two+1;
-    }else{
-        $last_one = 5;
-    }
-    $number = substr_replace($number,$last_one,-1,1);
-    $number = substr_replace($number,$last_two,-2,1);
-
-    return $number;
-
-}
 
 ?>
